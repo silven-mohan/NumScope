@@ -14,7 +14,7 @@ void NumCheck()
 	while(no!=0)
 	{
 		k=no%10;
-		s=s+k;
+		s=(s*10)+k;
 		no=no/10;
 	}
 	for(i=2;i<=n/2;i++)
