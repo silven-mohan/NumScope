@@ -20,7 +20,24 @@ Created from scratch using only what I knew at the time, NumScope features 11 po
 - ✅ **Spy Number**
 - ✅ **Emirp Number**
 - ✅ **Prime Number**
-- ✅ **(Future Ready)** Support for Happy, Kaprekar, Automorphic, etc.
+
+---
+
+### 🔁 Number Series Generator:
+Prints a range-based series of:
+- Even Numbers
+- Odd Numbers
+- Prime Numbers
+- Composite Numbers
+- Perfect Numbers
+- Armstrong Numbers
+- Strong Numbers
+- Palindromes
+- Niven Numbers
+- Spy Numbers
+- Twisted Primes
+- Fibonacci Sequence
+
 
 ---
 
