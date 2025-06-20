@@ -41,6 +41,32 @@ Prints a range-based series of:
 
 ---
 
+🔍 Number Property Analyzer (Single Value)
+* ✅ Armstrong Number
+
+* ✅ Palindrome
+
+* ✅ Strong Number
+
+* ✅ Niven Number
+
+* ✅ Perfect Number
+
+* ✅ Twisted Prime
+
+* ✅ Spy Number
+
+* ✅ Emirp Number
+
+* ✅ Prime Number
+
+Analyzes and prints all applicable number properties (Prime, Even/Odd, Palindrome, Spy, Strong, Twisted Prime, etc.) for a single number in one go.
+
+  * Great for quick diagnostics and exploration.
+
+
+---
+
 ## 💡 What Makes NumScope Special?
 
 - Built entirely from core C concepts (no external libraries)
