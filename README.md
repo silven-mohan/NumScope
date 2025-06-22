@@ -6,7 +6,7 @@ Created from scratch using only what I knew at the time, NumScope features 11 po
 
 ---
 
-## 🧠 Features
+## 🧠 Number Identifier
 
 🔍 Identify and classify the following types of numbers:
 
