@@ -33,7 +33,7 @@ Prints a range-based series of:
 - Armstrong Numbers
 - Strong Numbers
 - Palindromes
-- Niven Numbers
+- Niven(Harshad) Numbers
 - Spy Numbers
 - Twisted Primes
 - Fibonacci Sequence
