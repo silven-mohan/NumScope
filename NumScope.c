@@ -6,13 +6,26 @@
 /***Number Classifications**/
 /** Emirp Number **/
 
+void clear_screen()
+{
+	#ifdef _WIN32
+	{
+		system("cls");
+	}
+	#else
+	{
+		system("clear");
+	}
+	#endif
+}
+
 void emirp_numbers()
 {
 	int n, k, no, s=0, count=0, i;
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	while(no!=0)
 	{
 		k=no%10;
@@ -41,11 +54,11 @@ void emirp_numbers()
 void spy_number()
 {
 	int n, no, k, s=0, t=1;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	while(no!=0)
 	{
 		k=no%10;
@@ -71,7 +84,7 @@ void twisted_prime()
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	while(no!=0)
 	{
 		k=no%10;
@@ -100,7 +113,7 @@ void twisted_prime()
 void perfect_number()
 {
 	int i, n, s=0;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	for(i=1;i<n;i++)
@@ -110,7 +123,7 @@ void perfect_number()
 			s=s+i;
 		}
 	}
-	system("cls");
+	clear_screen();
 	
 	if(n==s)
 	{
@@ -128,7 +141,7 @@ void perfect_number()
 void niven_number()
 {
 	int i, n, k, no, s=0;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
@@ -153,11 +166,11 @@ void niven_number()
 void disarium_number()
 {
 	int n, no, s=0, k, l, m;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	if(n<0)
 	{
 		printf("Please enter a positive number.");
@@ -236,11 +249,11 @@ void disarium_number()
 void strong_number()
 {
 	int n, no, k, s=0, i;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	if(n>0)
 	{
 		while(no!=0)
@@ -277,11 +290,11 @@ void strong_number()
 void palindrome()
 {
 	int i, n, no, s=0, k;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	if(n>0)
 	{
 		while(no!=0)
@@ -314,11 +327,11 @@ void palindrome()
 void armstrong_number()
 {
 	int n, no, k, s=0;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	
 	if(no<=999)
 	{
@@ -376,7 +389,7 @@ void armstrong_number()
 void prime_number()
 {
 	int n, i, count=0;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	if (n==1)
@@ -726,7 +739,7 @@ void NumCheck()
 	int n, no, s=0, f=0, i, j, k;
 	printf("Enter any number:");
 	scanf("%d", &n);
-	system("cls");
+	clear_screen();
 	/** Emirp Numbers **/
 	no=n;
 	while(no!=0)
@@ -908,22 +921,22 @@ void NumCheck()
 /**Range Input**/
 void range_input()
 {
-	system("cls");
+	clear_screen();
 	printf("Enter the Starting Value of the Series:");
 	scanf("%d", &st);
-	system("cls");
+	clear_screen();
 	if(st<0)
 	{
 		printf("Please enter a Positive Number.");
 	}
 	printf("Enter the End Value of the Series:");
 	scanf("%d", &ed);
-	system("cls");
+	clear_screen();
 	if(ed<0||ed<st)
 	{
 		printf("Please enter a Valid Number.");
 	}
-	system("cls");
+	clear_screen();
 }
 
 /**Number Series (MAIN)**/
@@ -931,7 +944,7 @@ void number_series()
 {
 	do
 	{
-		system("cls");
+		clear_screen();
 		printf("\n\t\t\tNumber Series Printer");
 		printf("\n_________________________________________________________________________");
 		printf("\n|A. Even Number Series \t\t|G. Strong Number Series \t\t|");
@@ -943,7 +956,7 @@ void number_series()
 		printf("\n-------------------------------------------------------------------------");
 		printf("\nChoose one of the option from above:\n");
 		scanf(" %c", &chose);
-		system("cls");
+		clear_screen();
 		range_input();
 		switch(chose)
 		{
@@ -999,7 +1012,7 @@ void main()
 {
 	do
 	{
-		system("cls");
+		clear_screen();
 		printf("Choose one of the option below:");
 		printf("\n_________________________________________________________________");
 		printf("\n| A. Armstrong Number Identifier| F. Perfect Number Identifier\t|");
@@ -1012,7 +1025,7 @@ void main()
 		printf("\n| S. Number Series\t\t| T. Number Property Checker\t|");
 		printf("\n-----------------------------------------------------------------\n");
 		scanf(" %c", &ch);
-		system("cls");
+		clear_screen();
 		switch(ch)
 		{
 			case 'A':
