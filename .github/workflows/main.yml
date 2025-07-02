@@ -1,0 +1,15 @@
+name: C Build and Run
+
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install GCC(Compilation)
+        run: sudo apt-get install -y build-essential
+      - name: Compile C Program
+        run: gcc NumScope.c -o NumScope
+      - name: Run the Program
+        run: ./NumScope
