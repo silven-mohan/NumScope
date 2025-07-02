@@ -8,15 +8,16 @@
 
 void clear_screen()
 {
-	#ifdef _WIN32
-	{
-		system("cls");
-	}
-	#else
-	{
-		system("clear");
-	}
-	#endif
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear");
+		}
+		#endif
 }
 
 void emirp_numbers()
