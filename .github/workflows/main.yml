@@ -1,18 +1,23 @@
 name: C Build and Run
 
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Install GCC(Compilation)
         run: sudo apt-get install -y build-essential
+
       - name: Compile C Program
         run: gcc -DCI_MODE NumScope.c -o NumScope
-      - name: Run the Program
-        run: ./NumScope
+
+      - name: Run All Options in NumScope
         run: |
           echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope
-          cat NumScopeRunResult.txt
+      - name: NumScopeRunResult
+        run: cat NumScopeRunResult.txt
