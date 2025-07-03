@@ -51,16 +51,48 @@ jobs:
       - name: Compile Twisted Primes Identifier
         run: gcc -DCI_MODE Twisted_Primes_Identifier.c -o Twisted_Primes
 
-      # ✅ Runs with Correct Values 
-        
-      - name: Make Results directory
-        run: mkdir -p Results
+      # ✅ Runs with Correct Values
+      
+      - name: Correct Input Values for NumScope Run
+        run: |
+          cat <<EOF > Correct_Input_Values_NumScope.txt
+          A
+          153
+          Y
+          B
+          121
+          Y
+          C
+          145
+          Y
+          D
+          89
+          Y
+          E
+          18
+          Y
+          F
+          28
+          Y
+          G
+          37
+          Y
+          H
+          123
+          Y
+          I
+          13
+          Y
+          J
+          17
+          N
+          EOF
 
-      - name: Run NumScope
-        run: echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope
-
-      - name: Show output
-        run: cat Results/NumScope.txt || echo "No output captured"
+      - name: Run NumScope with Correct Values
+        run: ./NumScope < Correct_Input_Values_NumScope.txt > Results/NumScope.txt 2>&1
+      
+      - name: Show Results
+        run: cat Results/NumScope.txt || echo "Output missing or failed"
         
       - name: Run Armstrong Number Identifier
         run: |
