@@ -2,14 +2,29 @@
 
 #include<stdlib.h>
 
+void clear_screen()
+{
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear";)
+		}
+		#endif
+	#endif
+}
+
 main()
 {
 	int n, no, s=0, k, l, m;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	if(n<0)
 	{
 		printf("Please enter a positive number.");
