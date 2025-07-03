@@ -25,7 +25,7 @@ main()
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	system("cls");
+	clear_screen();
 	while(no!=0)
 	{
 		k=no%10;
