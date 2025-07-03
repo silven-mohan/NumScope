@@ -201,47 +201,47 @@ jobs:
       - name: Run Armstrong Number Identifier
         run: |
           echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Armstrong.txt 2>&1
-          echo "153" | ./Armstrong >> Results/Armstrong.txt 2>&1
+          echo "152" | ./Armstrong >> Results/Armstrong.txt 2>&1
 
       - name: Run Disarium Number Identifier
         run: |
           echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Disarium.txt 2>&1
-          echo "135" | ./Disarium >> Results/Disarium.txt 2>&1
+          echo "136" | ./Disarium >> Results/Disarium.txt 2>&1
 
       - name: Run Niven Number Identifier
         run: |
           echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Niven.txt 2>&1
-          echo "18" | ./Niven >> Results/Niven.txt 2>&1
+          echo "19" | ./Niven >> Results/Niven.txt 2>&1
 
       - name: Run Palindrome Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Palindrome.txt 2>&1
-            echo "121" | ./Palindrome >> Results/Palindrome.txt 2>&1
+            echo "123" | ./Palindrome >> Results/Palindrome.txt 2>&1
 
       - name: Run Perfect Number Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Perfect.txt 2>&1
-            echo "28" | ./Perfect >> Results/Perfect.txt 2>&1
+            echo "27" | ./Perfect >> Results/Perfect.txt 2>&1
 
       - name: Run Spy Number Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Spy.txt 2>&1
-            echo "123" | ./Spy >> Results/Spy.txt 2>&1
+            echo "112" | ./Spy >> Results/Spy.txt 2>&1
 
       - name: Run Strong Number Identifier 
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Stong.txt 2>&1
-            echo "145" | ./Strong >> Results/Strong.txt 2>&1
+            echo "146" | ./Strong >> Results/Strong.txt 2>&1
 
       - name: Run Twisted Prime Number Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Twisted_Primes.txt 2>&1
-            echo "13" | ./Twisted_Primes >> Results/Twisted_Primes.txt 2>&1
+            echo "23" | ./Twisted_Primes >> Results/Twisted_Primes.txt 2>&1
 
       - name: Run Emirp Number Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Emirp.txt 2>&1
-            echo "13" | ./Emirp >> Results/Emirp.txt 2>&1
+            echo "23" | ./Emirp >> Results/Emirp.txt 2>&1
 
       # NumCheck
 
@@ -309,7 +309,7 @@ jobs:
 
       - name: Run NumScope Number Series
         run: |
-          ./NS_Number_Series < Values_for_Number_Series.txt > NS_Number_Series.txt 2>&1
+          ./NS_Number_Series < Values_for_Number_Series.txt > Results/NS_Number_Series.txt 2>&1
 
     # Push Run Txt Files to Repo
     
