@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:28 is a Perfect Number.
+
+❌ Incorrect Attempt:
+
+Enter any number:28 is a Perfect Number.
