@@ -1,6 +1,7 @@
 /** Spy Number  identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -18,7 +19,7 @@ void clear_screen()
 }
 
 
-main()
+int main()
 {
 	int n, no, k, s=0, t=1;
 	system("cls");
@@ -41,4 +42,6 @@ main()
 	{
 		printf("%d is not a Spy Number.", n);
 	}
+
+	return 0;
 }
