@@ -1010,7 +1010,7 @@ void number_series()
 char choice;
 char ch;
 	
-void main()
+int main()
 {
 	do
 	{
@@ -1099,4 +1099,6 @@ void main()
 		scanf(" %c", &choice);
 	}while(choice=='Y'||choice=='y');
 	printf("Thanks for using!");
+
+	return 0;
 }
