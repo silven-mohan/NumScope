@@ -18,15 +18,12 @@ permissions:
 
 jobs:
   build:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Run build only if not triggered by bot
-        if: github.actor != 'github-actions[bot]'
-        run: echo "Build running by user:${{ github.actor }}"
 
       - name: Install GCC(Compilation)
         run: sudo apt-get install -y build-essential
@@ -244,7 +241,7 @@ jobs:
       - name: Run Emirp Number Identifier
         run: |
             echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Emirp.txt 2>&1
-            echo "23" | ./Emirp >> Results/Emirp.txt 2>&1
+            echo "21" | ./Emirp >> Results/Emirp.txt 2>&1
 
       # NumCheck
 
@@ -329,7 +326,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/NumScope.txt
-          git commit -m "Update NumScope output" || echo "No changes to commit"
+          git commit -m "Update NumScope output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload NumScope NumCheck output
@@ -345,7 +342,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/NS_NumCheck.txt
-          git commit -m "Update NS_NumCheck output" || echo "No changes to commit"
+          git commit -m "Update NS_NumCheck output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload NumScope Number Series output
@@ -361,7 +358,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/NS_Number_Series.txt
-          git commit -m "Update NS_Number_Series output" || echo "No changes to commit"
+          git commit -m "Update NS_Number_Series output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Armstrong Number Identifier output
@@ -377,7 +374,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Armstrong.txt
-          git commit -m "Update Armstrong Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Armstrong Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Disarium Number Identifier output
@@ -393,7 +390,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Disarium.txt
-          git commit -m "Update Disarium Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Disarium Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Niven Number Identifier output
@@ -409,7 +406,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Niven.txt
-          git commit -m "Update Niven Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Niven Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload palindrome Identifier output
@@ -425,7 +422,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Palindrome.txt
-          git commit -m "Update Palindrome Identifier output" || echo "No changes to commit"
+          git commit -m "Update Palindrome Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Perfect Number Identifier output
@@ -441,7 +438,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Perfect.txt
-          git commit -m "Update Perfect Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Perfect Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Spy Number Identifier output
@@ -457,7 +454,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Spy.txt
-          git commit -m "Update Spy Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Spy Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Strong Number Identifier output
@@ -473,7 +470,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Strong.txt
-          git commit -m "Update Strong Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Strong Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Twisted Prime Number Identifier output
@@ -489,7 +486,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Twisted_Primes.txt
-          git commit -m "Update Twisted Prime Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Twisted Prime Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
 
       - name: Upload Emirp Number Identifier output
@@ -505,5 +502,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Emirp.txt
-          git commit -m "Update Emirp Number Identifier output" || echo "No changes to commit"
+          git commit -m "Update Emirp Number Identifier output" [skip ci] || echo "No changes to commit"
           git push
