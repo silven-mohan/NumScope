@@ -3,12 +3,28 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+void clear_screen()
+{
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear";)
+		}
+		#endif
+	#endif
+}
+
+
 void NumCheck()
 {
 	int n, no, s=0, f=0, i, j, k;
 	printf("Enter any number:");
 	scanf("%d", &n);
-	system("cls");
+	clear_screen();
 	/** Emirp Numbers **/
 	no=n;
 	while(no!=0)
