@@ -151,11 +151,11 @@ jobs:
 
         # ❌ Runs with Incorrect Values
 
-      - name: Run All Options in NumScope
-        run: |
-          echo -e "\n\n❌ Incorrect Attempts:\n" >> Results/NumScope.txt
-          echo -e "A\n152\nY\nB\n122\nY\nC\n146\nY\nD\n136\nY\nE\n19\nY\nF\n27\nY\nG\n13\nY\nH\n112\nY\nI\n12\nY\nJ\n12\nN" | ./NumScope >> Results/NumScope.txt
-        continue-on-error: true
+     # - name: Run All Options in NumScope
+       # run: |
+         # echo -e "\n\n❌ Incorrect Attempts:\n" >> Results/NumScope.txt
+         # echo -e "A\n152\nY\nB\n122\nY\nC\n146\nY\nD\n136\nY\nE\n19\nY\nF\n27\nY\nG\n13\nY\nH\n112\nY\nI\n12\nY\nJ\n12\nN" | ./NumScope >> Results/NumScope.txt
+       # continue-on-error: true
         
       - name: Run Armstrong Number Identifier
         run: |
