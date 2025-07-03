@@ -354,6 +354,7 @@ void range_input()
 	clear_screen();
 	printf("Enter the Starting Value of the Series:");
 	scanf("%d", &st);
+	fflush(stdout);
 	clear_screen();
 	if(st<0)
 	{
@@ -362,6 +363,7 @@ void range_input()
 	}
 	printf("Enter the End Value of the Series:");
 	scanf("%d", &ed);
+	fflush(stdout);
 	clear_screen();
 	if(ed<0||ed<st)
 	{
@@ -374,6 +376,7 @@ void range_input()
 /**Number Series (MAIN)**/
 void main()
 {
+	fflush(stdout);
 	do
 	{
 		clear_screen();
@@ -393,39 +396,51 @@ void main()
 		switch(chose)
 		{
 			case 'A':
+				fflush(stdout);
 				even_numbers();
 				break;
 			case 'B':
+				fflush(stdout);
 				odd_numbers();
 				break;
 			case 'C':
+				fflush(stdout);
 				prime_numbers();
 				break;
 			case 'D':
+				fflush(stdout);
 				composite_numbers();
 				break;
 			case 'E':
+				fflush(stdout);
 				perfect_numbers();
 				break;
 			case 'F':
+				fflush(stdout);
 				armstrong_numbers();
 				break;
 			case 'G':
+				fflush(stdout);
 				strong_numbers();
 				break;
 			case 'H':
+				fflush(stdout);
 				palindromes();
 				break;
 			case 'I':
+				fflush(stdout);
 				niven_numbers();
 				break;
 			case 'J':
+				fflush(stdout);
 				spy_numbers();
 				break;
 			case 'K':
+				fflush(stdout);
 				twisted_primes();
 				break;
 			case 'L':
+				fflush(stdout);
 				fibonacci_series();
 				break;
 			default:
@@ -434,5 +449,6 @@ void main()
 		}
 		printf("\nDo you want to continue?(Y/N)");
 		scanf(" %c", &chce);
+		fflush(stdout);
 	}while(chce=='Y'||chce=='y');
 }
