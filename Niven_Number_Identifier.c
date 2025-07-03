@@ -1,6 +1,7 @@
 /** Niven Number Identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -18,10 +19,10 @@ void clear_screen()
 }
 
 
-main()
+int main()
 {
 	int i, n, k, no, s=0;
-	clear_screen();
+	/* clear_screen(); */
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
@@ -39,4 +40,6 @@ main()
 	{
 		printf("%d is not an Niven Number.", n);
 	}
+
+	return 0;
 }
