@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:153 is an armstrong number.
+
+❌ Incorrect Attempt:
+
+Enter any number:153 is an armstrong number.
