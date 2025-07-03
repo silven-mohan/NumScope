@@ -1,2 +1,2 @@
 
-Enter any number:145 is a Strong Number.Enter any number:145 is a Strong Number.Enter any number:145 is a Strong Number.Enter any number:146 is not a Strong Number.
+Enter any number:145 is a Strong Number.Enter any number:145 is a Strong Number.Enter any number:145 is a Strong Number.Enter any number:146 is not a Strong Number.Enter any number:145 is a Strong Number.Enter any number:146 is not a Strong Number.
