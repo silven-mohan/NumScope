@@ -3,6 +3,22 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+void clear_screen()
+{
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear";)
+		}
+		#endif
+	#endif
+}
+
+
 int st, ed, i, j, count=0, f, no, s, kf, l, r=0, k, f0=0, f1=1;
 char chose, chce;
 
@@ -321,22 +337,22 @@ void fibonacci_series()
 /**Range Input**/
 void range_input()
 {
-	system("cls");
+	clear_screen();
 	printf("Enter the Starting Value of the Series:");
 	scanf("%d", &st);
-	system("cls");
+	clear_screen();
 	if(st<0)
 	{
 		printf("Please enter a Positive Number.");
 	}
 	printf("Enter the End Value of the Series:");
 	scanf("%d", &ed);
-	system("cls");
+	clear_screen();
 	if(ed<0||ed<st)
 	{
 		printf("Please enter a Valid Number.");
 	}
-	system("cls");
+	clear_screen();
 }
 
 /**Number Series (MAIN)**/
@@ -344,7 +360,7 @@ void number_series()
 {
 	do
 	{
-		system("cls");
+		clear_screen();
 		printf("\n\t\t\tNumber Series Printer");
 		printf("\n_________________________________________________________________________");
 		printf("\n|A. Even Number Series \t\t|G. Strong Number Series \t\t|");
@@ -356,7 +372,7 @@ void number_series()
 		printf("\n-------------------------------------------------------------------------");
 		printf("\nChoose one of the option below:\n");
 		scanf(" %c", &chose);
-		system("cls");
+		clear_screen();
 		range_input();
 		switch(chose)
 		{
