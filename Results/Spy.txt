@@ -1,1 +1,9 @@
+✅ Correct Attempt:
 
+sh: 1: cls: not found
+Enter any number:123 is a Spy Number.
+
+❌ Incorrect Attempt:
+
+sh: 1: cls: not found
+Enter any number:123 is a Spy Number.
