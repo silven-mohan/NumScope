@@ -56,7 +56,7 @@ jobs:
       - name: Run All Options in NumScope
         run: |
           echo -e "✅ Correct Attempts:\n" > Results/NumScope.txt
-          echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope >> Results/NumScope.txt
+          echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope >> Results/NumScope.txt 2>&1
         continue-on-error: true
         
       - name: Run Armstrong Number Identifier
