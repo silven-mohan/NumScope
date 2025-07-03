@@ -302,3 +302,194 @@ jobs:
 
     # Push Run Txt Files to Repo
     
+      - name: Upload NumScope output
+        uses: actions/upload-artifact@v4
+        with:
+          name: NumScope-Run-Output
+          path: Results/NumScope.txt
+      - name: Push NumScope.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/NumScope.txt
+          git commit -m "Update NumScope output"
+          git push
+
+      - name: Upload NumScope NumCheck output
+        uses: actions/upload-artifact@v4
+        with:
+          name: NumScope-NumCheck-Run-Output
+          path: Results/NS_NumCheck.txt
+      - name: Push NS_NumCheck.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/NS_NumCheck.txt
+          git commit -m "Update NS_NumCheck output"
+          git push
+
+      - name: Upload NumScope Number Series output
+        uses: actions/upload-artifact@v4
+        with:
+          name: NumScope-Number-Series-Run-Output
+          path: Results/NS_Number_Series.txt
+      - name: Push NS_Number_Series.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/NS_Number_Series.txt
+          git commit -m "Update NS_Number_Series output"
+          git push
+
+      - name: Upload Armstrong Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Armstrong-Number-Identifier-Run-Output
+          path: Results/Armstrong.txt
+      - name: Push Armstrong.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Armstrong.txt
+          git commit -m "Update Armstrong Number Identifier output"
+          git push
+
+      - name: Upload Disarium Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Disarium-Number-Identifier-Run-Output
+          path: Results/Disarium.txt
+      - name: Push Disarium.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Disarium.txt
+          git commit -m "Update Disarium Number Identifier output"
+          git push
+
+      - name: Upload Niven Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Niven-Number-Identifier-Run-Output
+          path: Results/Niven.txt
+      - name: Push Niven.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Niven.txt
+          git commit -m "Update Niven Number Identifier output"
+          git push
+
+      - name: Upload palindrome Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Palindrome-Identifier-Run-Output
+          path: Results/Palindrome.txt
+      - name: Push Palindrome.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Palindrome.txt
+          git commit -m "Update Palindrome Identifier output"
+          git push
+
+      - name: Upload Perfect Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Perfect-Number-Identifier-Run-Output
+          path: Results/Perfect.txt
+      - name: Push Perfect.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Perfect.txt
+          git commit -m "Update Perfect Number Identifier output"
+          git push
+
+      - name: Upload Spy Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Spy-Number-Identifier-Run-Output
+          path: Results/Spy.txt
+      - name: Push Spy.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Spy.txt
+          git commit -m "Update Spy Number Identifier output"
+          git push
+
+      - name: Upload Strong Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Strong-Number-Identifier-Run-Output
+          path: Results/Strong.txt
+      - name: Push Strong.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Strong.txt
+          git commit -m "Update Strong Number Identifier output"
+          git push
+
+      - name: Upload Twisted Prime Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Twisted-Prime-Number-Identifier-Run-Output
+          path: Results/Twisted_Primes.txt
+      - name: Push Twisted_Primes.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Twisted_Primes.txt
+          git commit -m "Update Twisted Prime Number Identifier output"
+          git push
+
+      - name: Upload Emirp Number Identifier output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Emirp-Number-Identifier-Run-Output
+          path: Results/Emirp.txt
+      - name: Push Emirp.txt to repo
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git add Results/Emirp.txt
+          git commit -m "Update Emirp Number Identifier output"
+          git push
