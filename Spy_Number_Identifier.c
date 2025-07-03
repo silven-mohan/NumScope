@@ -2,6 +2,22 @@
 
 #include<stdlib.h>
 
+void clear_screen()
+{
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear";)
+		}
+		#endif
+	#endif
+}
+
+
 main()
 {
 	int n, no, k, s=0, t=1;
