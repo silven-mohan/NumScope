@@ -4,4 +4,4 @@ Enter any number:135 is a Disarium Number.
 
 ❌ Incorrect Attempt:
 
-Enter any number:135 is a Disarium Number.
+Enter any number:136 is not a Disarium Number.
