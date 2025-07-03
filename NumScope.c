@@ -2,24 +2,24 @@
 
 #include<stdlib.h>
 #include<stdio.h>
+#include<unistd.h>
 
 /***Number Classifications**/
+void clear_screen()
+{
+	if (!isatty(fileno(stdout)))
+		return;
+	#ifndef CI_MODE
+		#ifdef _WIN32
+	    		system("cls");
+		#else
+    			system("clear >/dev/null 2>&1");
+		#endif
+	#endif
+}
+
+
 /** Emirp Number **/
-
-#ifdef CI_MODE
-    #define clear_screen() ((void)0)
-#else
-    void clear_screen()
-    {
-        #ifdef _WIN32
-            system("cls");
-        #else
-            system("clear >/dev/null 2>&1");
-        #endif
-    }
-#endif
-
-
 void emirp_numbers()
 {
 	int n, k, no, s=0, count=0, i;
