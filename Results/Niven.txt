@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:18 is an Niven Number.
+
+❌ Incorrect Attempt:
+
+Enter any number:18 is an Niven Number.
