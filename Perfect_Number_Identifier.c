@@ -1,6 +1,7 @@
 /** Perfect Numbers Identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -18,10 +19,10 @@ void clear_screen()
 }
 
 
-main()
+int main()
 {
 	int i, n, s=0;
-	clear_screen();
+	/* clear_screen(); */
 	printf("Enter any number:");
 	scanf("%d", &n);
 	for(i=1;i<n;i++)
@@ -31,7 +32,7 @@ main()
 			s=s+i;
 		}
 	}
-	clear_screen();
+	/* clear_screen(); */
 	
 	if(n==s)
 	{
@@ -42,4 +43,6 @@ main()
 	{
 		printf("%d is not a Perfect Number.", n);
 	}
+
+	return 0;
 }
