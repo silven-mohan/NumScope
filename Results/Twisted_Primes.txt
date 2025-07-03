@@ -4,4 +4,4 @@ Enter any number:13 and 31 are Twisted Primes.
 
 ❌ Incorrect Attempt:
 
-Enter any number:13 and 31 are Twisted Primes.
+Enter any number:23 and 32 are Twisted Primes.
