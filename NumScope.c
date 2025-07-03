@@ -532,7 +532,7 @@ void perfect_numbers()
 		}
 		if(i==f)
 		{
-			printf("%d ", i);
+			printf("%d ");
 			count++;
 		}
 	}
@@ -1010,16 +1010,8 @@ void number_series()
 char choice;
 char ch;
 	
-int main()
+void main()
 {
-	FILE *fp = freopen("Results/NumScope.txt", "a", stdout); 
-    	if (fp == NULL)
-	{
-        	perror("freopen failed");
-        	return 1;
-    	}
-	setbuf(stdout, NULL);
-	
 	do
 	{
 		/* clear_screen(); */
@@ -1035,7 +1027,6 @@ int main()
 		printf("\n| S. Number Series\t\t| T. Number Property Checker\t|");
 		printf("\n-----------------------------------------------------------------\n");
 		scanf(" %c", &ch);
-		/*  clear_screen(); */
 		switch(ch)
 		{
 			case 'A':
@@ -1108,6 +1099,4 @@ int main()
 		scanf(" %c", &choice);
 	}while(choice=='Y'||choice=='y');
 	printf("Thanks for using!");
-
-	return 0;
 }
