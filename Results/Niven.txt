@@ -4,4 +4,4 @@ Enter any number:18 is an Niven Number.
 
 ❌ Incorrect Attempt:
 
-Enter any number:18 is an Niven Number.
+Enter any number:19 is not an Niven Number.
