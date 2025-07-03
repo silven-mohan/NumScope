@@ -1011,6 +1011,7 @@ char ch;
 	
 int main()
 {
+	setbuf(stdout, NULL);
 	do
 	{
 		clear_screen();
