@@ -1,10 +1,6 @@
 name: C Build and Run
 
 on:
-  push:
-    paths:
-      - '**.c'
-      - '**.txt'
   workflow_dispatch:
 
 permissions:
@@ -59,7 +55,7 @@ jobs:
       - name: Compile Twisted Primes Identifier
         run: gcc -DCI_MODE Twisted_Primes_Identifier.c -o Twisted_Primes
 
-      # ✅ Runs with Correct Values
+      # ✅ Correct Values To a Temporary File
       
       - name: Correct Input Values for NumScope Run
         run: |
@@ -96,163 +92,213 @@ jobs:
           N
           EOF
 
-      - name: Run NumScope with Correct Values
-        run: ./NumScope < Correct_Input_Values_NumScope.txt > Results/NumScope.txt 2>&1
+      #❌ Incorrect Values To a Temporary File
       
-      - name: Show Results
-        run: cat Results/NumScope.txt || echo "Output missing or failed"
-        
+      - name: Incorrect Input Values for NumScope
+        run: |
+          cat <<EOF > Incorrect_Input_Values_for_NumScope.txt
+          A
+          152
+          Y
+          B
+          122
+          Y
+          C
+          146
+          Y
+          D
+          136
+          Y
+          E
+          19
+          Y
+          F
+          27
+          Y
+          G
+          13
+          Y
+          H
+          112
+          Y
+          I
+          12
+          Y
+          J
+          12
+          N
+          EOF
+
+      #✅ Run with Correct Values
+      
+      - name: Run NumScope with Correct Values
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/NumScope.txt 2>&1
+          ./NumScope < Correct_Input_Values_NumScope.txt >> Results/NumScope.txt 2>&1
+
       - name: Run Armstrong Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Armstrong.txt
-          echo -e "153" | ./Armstrong >> Results/Armstrong.txt
-        continue-on-error: true
-        
+          echo -e "✅ Correct Attempt:\n" > Results/Armstrong.txt 2>&1
+          echo "153" | ./Armstrong >> Results/Armstrong.txt 2>&1
+
       - name: Run Disarium Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Disarium.txt
-          echo -e "135" | ./Disarium >> Results/Disarium.txt
-        continue-on-error: true
+          echo -e "✅ Correct Attempt:\n" > Results/Disarium.txt 2>&1
+          echo "135" | ./Disarium >> Results/Disarium.txt 2>&1
 
       - name: Run Niven Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Niven.txt
-          echo -e "18" | ./Niven >> Results/Niven.txt
-        continue-on-error: true
+          echo -e "✅ Correct Attempt:\n" > Results/Niven.txt 2>&1
+          echo "18' | ./Niven >> Results/Niven.txt 2>&1
 
       - name: Run Palindrome Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Palindrome.txt
-          echo -e "121" | ./Palindrome >> Results/Palindrome.txt
-        continue-on-error: true
+            echo -e "✅ Correct Attempt:\n" > Results/Palindrome.txt 2>&1
+            echo "121" | ./Palindrome >> Results/Palindrome.txt 2>&1
 
       - name: Run Perfect Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Perfect.txt
-          echo -e "28" | ./Perfect >> Results/Perfect.txt
-        continue-on-error: true
+            echo -e "✅ Correct Attempt:\n" > Results/Perfect.txt 2>&1
+            echo "28" | ./Perfect >> Results/Perfect.txt 2>&1
 
       - name: Run Spy Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Spy.txt
-          echo -e "123" | ./Spy >> Results/Spy.txt
-        continue-on-error: true
+            echo -e "✅ Correct Attempt:\n" > Results/Spy.txt 2>&1
+            echo "123" | ./Spy >> Results/Spy.txt 2>&1
 
-      - name: Run Strong Number Identifier
+      - name: Run Strong Number Identifier 
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Strong.txt
-          echo -e "145" | ./Strong >> Results/Strong.txt
-        continue-on-error: true
+            echo -e "✅ Correct Attempt:\n" > Results/Stong.txt 2>&1
+            echo "145" | ./Strong >> Results/Strong.txt 2>&1
 
       - name: Run Twisted Prime Number Identifier
         run: |
-          echo -e "✅ Correct Attempt:\n" > Results/Twisted_Primes.txt
-          echo -e "13" | ./Twisted_Primes >> Results/Twisted_Primes.txt
-        continue-on-error: true
+            echo -e "✅ Correct Attempt:\n" > Results/Twisted_Primes.txt 2>&1
+            echo "13" | ./Twisted_Primes >> Results/Twisted_Primes.txt 2>&1
 
       - name: Run Emirp Number Identifier
-        run : |
-            echo -e "✅ Correct Attempt:\n" > Results/Emirp.txt
-            echo -e "13" | ./Emirp >> Results/Emirp.txt
-        continue-on-error: true
+        run: |
+            echo -e "✅ Correct Attempt:\n" > Results/Emirp.txt 2>&1
+            echo "13" | ./Emirp >> Results/Emirp.txt 2>&1
 
+      # ❌ Run with Incorrect Values
 
-        # ❌ Runs with Incorrect Values
-
-     # - name: Run All Options in NumScope
-       # run: |
-         # echo -e "\n\n❌ Incorrect Attempts:\n" >> Results/NumScope.txt
-         # echo -e "A\n152\nY\nB\n122\nY\nC\n146\nY\nD\n136\nY\nE\n19\nY\nF\n27\nY\nG\n13\nY\nH\n112\nY\nI\n12\nY\nJ\n12\nN" | ./NumScope >> Results/NumScope.txt
-       # continue-on-error: true
-        
+      - name: Run NumScope with Incorrect Values
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/NumScope.txt 2>&1
+          ./NumScope < Incorrect_Input_Values_for_NumScope.txt >> Results/NumScope.txt 2>&1
       - name: Run Armstrong Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Armstrong.txt
-          echo -e "152" | ./Armstrong >> Results/Armstrong.txt
-        continue-on-error: true
-        
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Armstrong.txt 2>&1
+          echo "153" | ./Armstrong >> Results/Armstrong.txt 2>&1
+
       - name: Run Disarium Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Disarium.txt
-          echo -e "136" | ./Disarium >> Results/Disarium.txt
-        continue-on-error: true
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Disarium.txt 2>&1
+          echo "135" | ./Disarium >> Results/Disarium.txt 2>&1
 
       - name: Run Niven Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Niven.txt
-          echo -e "19" | ./Niven >> Results/Niven.txt
-        continue-on-error: true
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Niven.txt 2>&1
+          echo "18' | ./Niven >> Results/Niven.txt 2>&1
 
       - name: Run Palindrome Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Palindrome.txt
-          echo -e "123" | ./Palindrome >> Results/Palindrome.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Palindrome.txt 2>&1
+            echo "121" | ./Palindrome >> Results/Palindrome.txt 2>&1
 
       - name: Run Perfect Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Perfect.txt
-          echo -e "27" | ./Perfect >> Results/Perfect.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Perfect.txt 2>&1
+            echo "28" | ./Perfect >> Results/Perfect.txt 2>&1
 
       - name: Run Spy Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Spy.txt
-          echo -e "112" | ./Spy >> Results/Spy.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Spy.txt 2>&1
+            echo "123" | ./Spy >> Results/Spy.txt 2>&1
 
-      - name: Run Strong Number Identifier
+      - name: Run Strong Number Identifier 
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Strong.txt
-          echo -e "146" | ./Strong >> Results/Strong.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Stong.txt 2>&1
+            echo "145" | ./Strong >> Results/Strong.txt 2>&1
 
       - name: Run Twisted Prime Number Identifier
         run: |
-          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Twisted_Primes.txt
-          echo -e "23" | ./Twisted_Primes >> Results/Twisted_Primes.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Twisted_Primes.txt 2>&1
+            echo "13" | ./Twisted_Primes >> Results/Twisted_Primes.txt 2>&1
 
       - name: Run Emirp Number Identifier
-        run : |
-            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Emirp.txt
-            echo -e "23" | ./Emirp >> Results/Emirp.txt
-        continue-on-error: true
-
-        
-        # NumCheck
-
-      - name: Run NumScope NumCheck
         run: |
-          echo -e "7" | ./NS_NumCheck > Results/NS_NumCheck.txt
-        continue-on-error: true
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Emirp.txt 2>&1
+            echo "13" | ./Emirp >> Results/Emirp.txt 2>&1
 
-        # Number Series
+      # NumCheck
+
+      - name: Run Numcheck
+        run: |
+            echo "7" | ./NS_NumCheck > Results/NS_NumCheck.txt
+
+      # 🔢 Number Series
+
+      # Input Values
+
+      - name: Range Values for Number Series
+        run: |
+            cat <<EOF > Values_for_Number_Series.txt
+            A
+            1
+            100
+            Y
+            B
+            1
+            100
+            Y
+            C
+            1
+            100
+            Y
+            D
+            1
+            100
+            Y
+            E
+            1
+            100
+            Y
+            F
+            1
+            100
+            Y
+            G
+            1
+            100
+            Y
+            H
+            1
+            100
+            Y
+            I
+            1
+            100
+            Y
+            J
+            1
+            100
+            Y
+            K
+            1
+            100
+            Y
+            L
+            0
+            100
+            N
+            EOF
+
 
       - name: Run NumScope Number Series
         run: |
-            echo -e "A\n1\n100\nY\nB\n1\n100\nY\nC\n1\n100\nY\nD\n1\n100\nY\nE\n1\n100\nY\nF\n1\n100\nY\nG\n1\n100\nY\nH\n1\n100\nY\nI\n1\n100\nY\nJ\n1\n100\nY\nK\n1\n100\nY\nL\n0\n100\nN" | ./NS_Number_Series > NS_Number_Series.txt
-        continue-on-error: true
-        
-      - name: Upload NumScope output
-        uses: actions/upload-artifact@v4
-        with:
-          name: NumScope-Run-Output
-          path: Results/NumScope.txt
-      - name: Push NumScope.txt to repo
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          git add Results/NumScope.txt
-          git commit -m "Update NumScope output" || echo "No changes to commit"
-          git push
+          ./NS_Number_Series < Values_for_Number_Series.txt > NS_Number_Series.txt 2>&1
 
-
-
-
-        
-
-          
+    # Push Run Txt Files to Repo
+    
