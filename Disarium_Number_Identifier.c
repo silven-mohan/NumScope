@@ -1,6 +1,7 @@
 /** Disarium Numbers Identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -17,14 +18,14 @@ void clear_screen()
 	#endif
 }
 
-main()
+int main()
 {
 	int n, no, s=0, k, l, m;
-	clear_screen();
+	/* clear_screen(); */
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	clear_screen();
+	/* clear_screen(); */
 	if(n<0)
 	{
 		printf("Please enter a positive number.");
@@ -96,4 +97,5 @@ main()
 	{
 		printf("Sorry, I can't check that.");
 	}
+	return 0;
 }
