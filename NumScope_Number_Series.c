@@ -374,7 +374,7 @@ void range_input()
 }
 
 /**Number Series (MAIN)**/
-void main()
+int main()
 {
 	fflush(stdout);
 	do
@@ -451,4 +451,6 @@ void main()
 		scanf(" %c", &chce);
 		fflush(stdout);
 	}while(chce=='Y'||chce=='y');
+
+	return 0;
 }
