@@ -1,6 +1,14 @@
 name: C Build and Run
 
 on:
+  push:
+    paths:
+      - '**/*.c'
+      - '**/*.txt'
+    branches:
+      - main
+    tags-ignore:
+      - '**'
   workflow_dispatch:
 
 permissions:
@@ -8,6 +16,7 @@ permissions:
 
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
