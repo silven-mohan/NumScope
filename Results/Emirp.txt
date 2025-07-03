@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:13 and 31 are Emirp Numbers.
+
+❌ Incorrect Attempt:
+
+Enter any number:13 and 31 are Emirp Numbers.
