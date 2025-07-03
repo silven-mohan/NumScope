@@ -6,20 +6,19 @@
 /***Number Classifications**/
 /** Emirp Number **/
 
-void clear_screen()
-{
-	#ifndef CI_MODE
-		#ifdef _WIN32
-		{
-			system("cls");
-		}
-		#else
-		{
-			system("clear >/dev/null 2>&1");
-		}
-		#endif
-	#endif
-}
+#ifdef CI_MODE
+    #define clear_screen() ((void)0)
+#else
+    void clear_screen()
+    {
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear >/dev/null 2>&1");
+        #endif
+    }
+#endif
+
 
 void emirp_numbers()
 {
