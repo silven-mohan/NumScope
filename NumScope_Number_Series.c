@@ -131,7 +131,7 @@ void perfect_numbers()
 		}
 		if(i==f)
 		{
-			printf("%d ");
+			printf("%d ", i);
 			count++;
 		}
 	}
