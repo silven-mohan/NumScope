@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:135 is a Disarium Number.
+
+❌ Incorrect Attempt:
+
+Enter any number:135 is a Disarium Number.
