@@ -5,6 +5,8 @@ on:
     paths:
       - '**/*.c'
       - '**/*.txt'
+      - '**.yml'
+      - '**.yaml'
     branches:
       - main
     tags-ignore:
@@ -209,7 +211,7 @@ jobs:
       - name: Run Niven Number Identifier
         run: |
           echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Niven.txt 2>&1
-          echo "18' | ./Niven >> Results/Niven.txt 2>&1
+          echo "18" | ./Niven >> Results/Niven.txt 2>&1
 
       - name: Run Palindrome Identifier
         run: |
