@@ -1,1 +1,5 @@
-
+Enter any number:
+7 is a Spy Number.
+7 is a Odd Number.
+7 is a Prime Number.
+7 is an Niven Number.7 is a Palindrome.
