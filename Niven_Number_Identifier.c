@@ -2,10 +2,26 @@
 
 #include<stdlib.h>
 
+void clear_screen()
+{
+	#ifndef CI_MODE
+		#ifdef _WIN32
+		{
+			system("cls");
+		}
+		#else
+		{
+			system("clear";)
+		}
+		#endif
+	#endif
+}
+
+
 main()
 {
 	int i, n, k, no, s=0;
-	system("cls");
+	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
