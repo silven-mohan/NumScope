@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   build:
-    if: false
     runs-on: ubuntu-latest
 
     steps:
@@ -14,12 +13,185 @@ jobs:
       - name: Install GCC(Compilation)
         run: sudo apt-get install -y build-essential
 
-      - name: Compile C Program
+        # Compilations
+
+      - name: Compile NumScope
         run: gcc -DCI_MODE NumScope.c -o NumScope
+
+      - name: Compile NumScope NumCheck
+        run: gcc -DCI_MODE NumScope_NumCheck.c -o NS_NumCheck
+
+      - name: Compile NumScope Number Series Identifier
+        run: gcc -DCI_MODE NumScope_Number_Series.c -o NS_Number_Series
+        
+      - name: Compile Armstrong Number Identifier
+        run: gcc -DCI_MODE Armstrong_Number_Identifier.c -o Armstrong
+
+      - name: Compile Disarium Number Identifer
+        run: gcc -DCI_MODE Disarium_Number_Identifier.c -o Disarium
+
+      - name: Compile Emirp Number Identifier
+        run: gcc -DCI_MODE Emirp_Number_Identifier.c -o Emirp
+
+      - name: Compile Niven Number Identifier
+        run: gcc -DCI_MODE Niven_Number_Identifier.c -o Niven
+
+      - name: Compile Palindrome Identifier
+        run: gcc -DCI_MODE Palindrome_Identifier.c -o Palindrome
+
+      - name: Compile Perfect Number Identifier
+        run: gcc -DCI_MODE Perfect_Number_Identifier.c -o Perfect
+
+      - name: Compile Spy Number Identifier
+        run: gcc -DCI_MODE Spy_Number_Identifier.c -o Spy
+
+      - name: Compile Strong Number Identifer
+        run: gcc -DCI_MODE Strong_Number_Identifier.c -o Strong
+
+      - name: Compile Twisted Primes Identifier
+        run: gcc -DCI_MODE Twisted_Primes_Identifier.c -o Twisted_Primes
+
+      # ✅ Runs with Correct Values 
+        
+      - name: Run All Options in NumScope
+        run: |
+          echo -e "✅ Correct Attempts:\n" > Results/NumScope.txt
+          echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope >> Results/NumScope.txt
+        continue-on-error: true
+        
+      - name: Run Armstrong Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Armstrong.txt
+          echo -e "153" | ./Armstrong >> Results/Armstrong.txt
+        continue-on-error: true
+        
+      - name: Run Disarium Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Disarium.txt
+          echo -e "135" | ./Disarium >> Results/Disarium.txt
+        continue-on-error: true
+
+      - name: Run Niven Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Niven.txt
+          echo -e "18" | ./Niven >> Results/Niven.txt
+        continue-on-error: true
+
+      - name: Run Palindrome Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Palindrome.txt
+          echo -e "121" | ./Palindrome >> Results/Palindrome.txt
+        continue-on-error: true
+
+      - name: Run Perfect Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Perfect.txt
+          echo -e "28" | ./Perfect >> Results/Perfect.txt
+        continue-on-error: true
+
+      - name: Run Spy Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Spy.txt
+          echo -e "123" | ./Spy >> Results/Spy.txt
+        continue-on-error: true
+
+      - name: Run Strong Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Strong.txt
+          echo -e "145" | ./Strong >> Results/Strong.txt
+        continue-on-error: true
+
+      - name: Run Twisted Prime Number Identifier
+        run: |
+          echo -e "✅ Correct Attempt:\n" > Results/Twisted_Primes.txt
+          echo -e "13" | ./Twisted_Primes >> Results/Twisted_Primes.txt
+        continue-on-error: true
+
+      - name: Run Emirp Number Identifier
+        run : |
+            echo -e "✅ Correct Attempt:\n" > Results/Emirp.txt
+            echo -e "13" | ./Emirp >> Results/Emirp.txt
+        continue-on-error: true
+
+
+        # ❌ Runs with Incorrect Values
 
       - name: Run All Options in NumScope
         run: |
-          echo -e "A\n153\nY\nB\n121\nY\nC\n145\nY\nD\n89\nY\nE\n18\nY\nF\n28\nY\nG\n37\nY\nH\n123\nY\nI\n13\nY\nJ\n17\nN" | ./NumScope
+          echo -e "\n\n❌ Incorrect Attempts:\n" >> Results/NumScope.txt
+          echo -e "A\n152\nY\nB\n122\nY\nC\n146\nY\nD\n136\nY\nE\n19\nY\nF\n27\nY\nG\n13\nY\nH\n112\nY\nI\n12\nY\nJ\n12\nN" | ./NumScope >> Results/NumScope.txt
         continue-on-error: true
-      - name: NumScopeRunResult
-        run: cat NumScopeRunResult.txt
+        
+      - name: Run Armstrong Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Armstrong.txt
+          echo -e "152" | ./Armstrong >> Results/Armstrong.txt
+        continue-on-error: true
+        
+      - name: Run Disarium Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Disarium.txt
+          echo -e "136" | ./Disarium >> Results/Disarium.txt
+        continue-on-error: true
+
+      - name: Run Niven Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Niven.txt
+          echo -e "19" | ./Niven >> Results/Niven.txt
+        continue-on-error: true
+
+      - name: Run Palindrome Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Palindrome.txt
+          echo -e "123" | ./Palindrome >> Results/Palindrome.txt
+        continue-on-error: true
+
+      - name: Run Perfect Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Perfect.txt
+          echo -e "27" | ./Perfect >> Results/Perfect.txt
+        continue-on-error: true
+
+      - name: Run Spy Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Spy.txt
+          echo -e "112" | ./Spy >> Results/Spy.txt
+        continue-on-error: true
+
+      - name: Run Strong Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Strong.txt
+          echo -e "146" | ./Strong >> Results/Strong.txt
+        continue-on-error: true
+
+      - name: Run Twisted Prime Number Identifier
+        run: |
+          echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Twisted_Primes.txt
+          echo -e "23" | ./Twisted_Primes >> Results/Twisted_Primes.txt
+        continue-on-error: true
+
+      - name: Run Emirp Number Identifier
+        run : |
+            echo -e "\n\n❌ Incorrect Attempt:\n" >> Results/Emirp.txt
+            echo -e "23" | ./Emirp >> Results/Emirp.txt
+        continue-on-error: true
+
+        
+        # NumCheck
+
+      - name: Run NumScope NumCheck
+        run: |
+          echo -e "7" | ./NS_NumCheck > Results/NS_NumCheck.txt
+        continue-on-error: true
+
+        # Number Series
+
+      - name: Run NumScope Number Series
+        run: |
+            echo -e "A\n1\n100\nY\nB\n1\n100\nY\nC\n2\n100\nY\nD\n2\n100\nY\nE\n1\n100\nY\nF\n1\n100\nY\nG\n1\n100\nY\nH\n1\n100\nY\nI\n1\n100\nY\nJ\n1\n100\nY\nK\n1\n100\nY\nL\n0\n100\nN"
+        continue-on-error: true
+        
+          
+        
+
+          
