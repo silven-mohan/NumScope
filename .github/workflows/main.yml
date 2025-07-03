@@ -226,7 +226,25 @@ jobs:
             echo -e "A\n1\n100\nY\nB\n1\n100\nY\nC\n1\n100\nY\nD\n1\n100\nY\nE\n1\n100\nY\nF\n1\n100\nY\nG\n1\n100\nY\nH\n1\n100\nY\nI\n1\n100\nY\nJ\n1\n100\nY\nK\n1\n100\nY\nL\n0\n100\nN" | ./NS_Number_Series > NS_Number_Series.txt
         continue-on-error: true
         
-          
+      - name: Debug Results directory
+        run: |
+            echo "Listing Results/ directory:"
+            ls -l Results/
+            echo "Contents of Results/NumScope.txt:"
+            cat Results/NumScope.txt || echo "File empty or not found"
+      - name: Minimal output test
+        run: |
+          mkdir -p Results
+          echo "Hello, CI!" > Results/test.txt 2>&1
+          ls -l Results/
+          cat Results/test.txt
+      - name: Confirm Results output
+        run: |
+          echo "-----"
+          ls -l Results/NumScope.txt
+          cat Results/NumScope.txt || echo "No data present"
+
+
         
 
           
