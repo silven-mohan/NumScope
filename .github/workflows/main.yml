@@ -372,7 +372,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Armstrong.txt
           git commit -m "Update Armstrong Number Identifier output"
           git push
@@ -388,7 +388,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Disarium.txt
           git commit -m "Update Disarium Number Identifier output"
           git push
@@ -404,7 +404,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Niven.txt
           git commit -m "Update Niven Number Identifier output"
           git push
@@ -420,7 +420,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Palindrome.txt
           git commit -m "Update Palindrome Identifier output"
           git push
@@ -436,7 +436,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Perfect.txt
           git commit -m "Update Perfect Number Identifier output"
           git push
@@ -452,7 +452,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Spy.txt
           git commit -m "Update Spy Number Identifier output"
           git push
@@ -468,7 +468,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Strong.txt
           git commit -m "Update Strong Number Identifier output"
           git push
@@ -484,7 +484,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Twisted_Primes.txt
           git commit -m "Update Twisted Prime Number Identifier output"
           git push
@@ -500,7 +500,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com${{ github.repository }}
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
           git add Results/Emirp.txt
           git commit -m "Update Emirp Number Identifier output"
           git push
