@@ -158,7 +158,7 @@ jobs:
       - name: Run Niven Number Identifier
         run: |
           echo -e "✅ Correct Attempt:\n" > Results/Niven.txt 2>&1
-          echo "18' | ./Niven >> Results/Niven.txt 2>&1
+          echo "18" | ./Niven >> Results/Niven.txt 2>&1
 
       - name: Run Palindrome Identifier
         run: |
