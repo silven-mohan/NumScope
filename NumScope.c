@@ -1027,7 +1027,7 @@ void main()
 		printf("\n| S. Number Series\t\t| T. Number Property Checker\t|");
 		printf("\n-----------------------------------------------------------------\n");
 		scanf(" %c", &ch);
-		/* /* clear_screen(); */ */
+		/*  clear_screen(); */
 		switch(ch)
 		{
 			case 'A':
