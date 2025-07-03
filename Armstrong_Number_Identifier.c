@@ -1,6 +1,7 @@
 /** Armstrong Number Identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -17,14 +18,14 @@ void clear_screen()
 	#endif
 }
 
-main()
+int main()
 {
 	int n, no, k, s=0;
 	clear_screen();
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	clear_screen();
+	/* clear_screen(); */
 	
 	if(no<=999)
 	{
@@ -75,4 +76,6 @@ main()
 	{
 		printf("%d is not an armstrong number.", n);
 	}
+
+	return 0;
 }
