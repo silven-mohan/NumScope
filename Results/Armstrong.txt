@@ -4,4 +4,4 @@ Enter any number:153 is an armstrong number.
 
 ❌ Incorrect Attempt:
 
-Enter any number:153 is an armstrong number.
+Enter any number:152 is not an armstrong number.
