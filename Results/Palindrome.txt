@@ -1,1 +1,7 @@
+✅ Correct Attempt:
 
+Enter any number:121 is a Palindrome
+
+❌ Incorrect Attempt:
+
+Enter any number:121 is a Palindrome
