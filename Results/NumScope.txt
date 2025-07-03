@@ -1,1 +1,131 @@
+Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:153 is an armstrong number.
 
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:121 is a Palindrome
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:145 is a Strong Number.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:89 is a Disarium Number.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:18 is an Niven Number.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:28 is a Perfect Number.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:37 and 73 are Twisted Primes.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:123 is a Spy Number.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:13 and 31 are Emirp Numbers.
+
+	Do you want to continue to the Number Identification?(Y/N)Choose one of the option below:
+_________________________________________________________________
+| A. Armstrong Number Identifier| F. Perfect Number Identifier	|
+| B. Palindrome Identifier	| G. Twisted Primes Identifier	|
+| C. Strong Number Identifier	| H. Spy Number Identifier	|
+| D. Disarium Number Identifier	| I. Emirp Number Identifier	|
+| E. Niven Number Identifier	| J. Prime Number Identifier	|
+-----------------------------------------------------------------
+_________________________________________________________________
+| S. Number Series		| T. Number Property Checker	|
+-----------------------------------------------------------------
+Enter any number:17 is a prime number
+
+	Do you want to continue to the Number Identification?(Y/N)Thanks for using!
