@@ -1,6 +1,7 @@
 /** Twisted Prime Number Identifier **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -18,13 +19,13 @@ void clear_screen()
 }
 
 
-main()
+int main()
 {
 	int n, k, no, s=0, count=0, i;
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	clear_screen();
+	/* clear_screen(); */
 	while(no!=0)
 	{
 		k=no%10;
@@ -46,4 +47,6 @@ main()
 	{
 		printf("%d and %d are not Twisted Primes.", n, s);
 	}
+
+	return 0;
 }
