@@ -21,7 +21,7 @@ void clear_screen()
 int main()
 {
 	int n, no, k, s=0;
-	clear_screen();
+	/* clear_screen();*/ 
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
