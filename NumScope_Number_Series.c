@@ -356,7 +356,7 @@ void range_input()
 }
 
 /**Number Series (MAIN)**/
-void number_series()
+void main()
 {
 	do
 	{
