@@ -81,6 +81,12 @@ Analyzes and prints all applicable number properties (Prime, Even/Odd, Palindrom
 
 ---
 
+## I/O (Input/Output):
+
+ You can check the Run Results in [Results](./Results).
+
+ ---
+
 ## 👨‍💻 Built With
 
 - C Language
