@@ -203,7 +203,8 @@ void NumCheck()
 	}	
 }
 
-void main()
+int main()
 {
 	NumCheck();
+	return 0;
 }
