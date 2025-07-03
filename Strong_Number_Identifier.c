@@ -1,6 +1,7 @@
 /** Strong Numbers Identifer **/
 
 #include<stdlib.h>
+#include<stdio.h>
 
 void clear_screen()
 {
@@ -17,14 +18,14 @@ void clear_screen()
 	#endif
 }
 
-main()
+int main()
 {
 	int n, no, k, s=0, i;
-	clear_screen();
+	/* clear_screen(); */ 
 	printf("Enter any number:");
 	scanf("%d", &n);
 	no=n;
-	clear_screen();
+	/* clear_screen(); */
 	if(n>0)
 	{
 		while(no!=0)
@@ -54,4 +55,6 @@ main()
 	{
 		printf("Please enter a positive number.");
 	}
+
+	return 0;
 }
