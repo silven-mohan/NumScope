@@ -4,4 +4,4 @@ Enter any number:28 is a Perfect Number.
 
 ❌ Incorrect Attempt:
 
-Enter any number:28 is a Perfect Number.
+Enter any number:27 is not a Perfect Number.
