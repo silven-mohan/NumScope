@@ -25,6 +25,7 @@ char chose, chce;
 /**Even Number**/
 void even_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -41,6 +42,7 @@ void even_numbers()
 /**Odd Numbers**/
 void odd_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -57,6 +59,7 @@ void odd_numbers()
 /**Prime Numbers**/
 void prime_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -88,6 +91,7 @@ void prime_numbers()
 /**Composite Numbers**/
 void composite_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -118,6 +122,7 @@ void composite_numbers()
 /**Perfect Numbers**/
 void perfect_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -142,6 +147,7 @@ void perfect_numbers()
 /**Strong Numbers**/
 void strong_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -172,6 +178,7 @@ void strong_numbers()
 /**Palindromes**/
 void palindromes()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -196,6 +203,7 @@ void palindromes()
 /**Niven Numbers**/
 void niven_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -221,6 +229,7 @@ void niven_numbers()
 /**Spy Numbers**/
 void spy_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -248,6 +257,7 @@ void spy_numbers()
 /**Twisted Primes**/
 void twisted_primes()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -296,6 +306,7 @@ void twisted_primes()
 /**Armstrong Numbers**/
 void armstrong_numbers()
 {
+	count=0;
 	printf("{ ");
 	for(i=st;i<=ed;i++)
 	{
@@ -320,6 +331,9 @@ void armstrong_numbers()
 /**Fibonacci Series**/
 void fibonacci_series()
 {
+	count=0;
+	f0=0;
+	f1=1;
 	printf("{ ");
 	printf("%d %d ", f0, f1);
 	i=2;
@@ -344,6 +358,7 @@ void range_input()
 	if(st<0)
 	{
 		printf("Please enter a Positive Number.");
+		return;
 	}
 	printf("Enter the End Value of the Series:");
 	scanf("%d", &ed);
@@ -351,6 +366,7 @@ void range_input()
 	if(ed<0||ed<st)
 	{
 		printf("Please enter a Valid Number.");
+		return;
 	}
 	clear_screen();
 }
