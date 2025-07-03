@@ -1012,6 +1012,12 @@ char ch;
 	
 int main()
 {
+	 FILE *fp = freopen("Results/NumScope.txt", "a", stdout); 
+    	 if (fp == NULL)
+	 {
+        	perror("freopen failed");
+        	return 1;
+    	 }
 	do
 	{
 		/* clear_screen(); */
