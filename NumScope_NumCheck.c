@@ -12,7 +12,7 @@ void clear_screen()
 		}
 		#else
 		{
-			system("clear";)
+			system("clear >/dev/null 2>&1");
 		}
 		#endif
 	#endif
