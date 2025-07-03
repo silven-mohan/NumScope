@@ -15,11 +15,8 @@ jobs:
 
         # Compilations
 
-      - name: Run NumScope
-        run: echo -e "A\n153\nY\nB\n121\nY\n...etc..." | ./NumScope
-
-      - name: Show output
-        run: cat Results/NumScope.txt || echo "No output captured"
+      - name: Compile NumScope
+        run: gcc -DCI_MODE NumScope.c -o NumScope
 
       - name: Compile NumScope NumCheck
         run: gcc -DCI_MODE NumScope_NumCheck.c -o NS_NumCheck
