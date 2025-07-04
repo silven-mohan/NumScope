@@ -1,6 +1,6 @@
 # NumScope: The Number Explorer 🔢
 
-![CI](https://github.com/silven-mohan/NumScope/actions/workflows//.github/workflows/main.yml/badge.svg)
+![CI](https://github.com/silven-mohan/NumScope/actions/workflows/.github/workflows/main.yml/badge.svg)
 
 
 **NumScope** is a command-line based number theory toolkit written in C, built entirely using foundational programming concepts such as loops, conditionals, and functions.
