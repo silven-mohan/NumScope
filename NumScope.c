@@ -126,7 +126,6 @@ void perfect_number()
 		}
 	}
 	/* clear_screen(); */
-	
 	if(n==s)
 	{
 		printf("%d is a Perfect Number.", n);
