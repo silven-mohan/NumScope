@@ -26,7 +26,6 @@ int main()
 	scanf("%d", &n);
 	no=n;
 	/* clear_screen(); */
-	
 	if(no<=999)
 	{
 		while(no!=0)
