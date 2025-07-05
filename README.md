@@ -93,7 +93,13 @@ Analyzes and prints all applicable number properties (Prime, Even/Odd, Palindrom
 - Dev C++
 - Pure logic, no external libraries
 
----
+----
+
+## 📃License
+
+  See included [LICENSE.md](./LICENSE.md) file for more details.
+
+----
 
 ## Author: Silven Mohan
 
