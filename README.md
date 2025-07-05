@@ -97,7 +97,7 @@ Analyzes and prints all applicable number properties (Prime, Even/Odd, Palindrom
 
 ## 📃License
 
-  See included [LICENSE.md](./LICENSE.md) file for more details.
+  See included [LICENSE.md](./LICENSE) file for more details.
 
 ----
 
